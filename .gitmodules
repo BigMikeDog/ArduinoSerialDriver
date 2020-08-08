@@ -1,0 +1,6 @@
+[submodule "ArduinoSerialDriver/vendor/spdlog"]
+	path = ArduinoSerialDriver/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "ArduinoSerialDriver/vendor/SerialPort"]
+	path = ArduinoSerialDriver/vendor/SerialPort
+	url = https://github.com/manashmandal/SerialPort
