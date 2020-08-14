@@ -341,3 +341,4 @@ healthchecksdb
 /bin-int/Debug-windows-x86_64/ArduinoSerialDriver
 *.sln
 *.vcxproj
+/ArduinoSerialDriver/ArduinoSerialDriver.vcxproj.filters

@@ -1,11 +1,17 @@
 workspace "ArduinoSerialDriver"
-	architecture "x64"
+	architecture "x86_64"
+	startproject "ArduinoSerialDriver"
 
 	configurations
 	{
 		"Debug",
 		"Release",
 		"Dist" 
+	}
+
+	flags
+	{
+		"MultiProcessorCompile"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -22,7 +28,9 @@ project "ArduinoSerialDriver"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/SerialPort/include/**.hpp",
+		"%{prj.name}/vendor/SerialPort/src/**.cpp"
 	}
 
 	includedirs
@@ -35,17 +43,21 @@ project "ArduinoSerialDriver"
 	filter "system:windows"
 		systemversion "latest"
 
+		postbuildcommands {
+			("{COPY} %{prj.location}src/Core/InstructionSet.h ../ArduinoCode/sketch_serialReceiver/src")
+		}
+
 	filter "configurations:Debug"
 		defines "ASD_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "ASD_RELEASE"
 		runtime "Release"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Dist"
 		defines "ASD_DIST"
 		runtime "Release"
-		symbols "On"
+		symbols "on"

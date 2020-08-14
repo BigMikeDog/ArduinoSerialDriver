@@ -21,5 +21,5 @@ namespace ASD {
 #define ASD_INFO(...)     ::ASD::Log::GetLogger()->info(__VA_ARGS__)
 #define ASD_WARN(...)     ::ASD::Log::GetLogger()->warn(__VA_ARGS__)
 #define ASD_ERROR(...)    ::ASD::Log::GetLogger()->error(__VA_ARGS__)
-#define ASD_FATAL(...)    ::ASD::Log::GetLogger()->fatal(__VA_ARGS__)
+#define ASD_CRITICAL(...)    ::ASD::Log::GetLogger()->critical(__VA_ARGS__)
 

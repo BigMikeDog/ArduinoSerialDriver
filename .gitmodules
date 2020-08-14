@@ -4,3 +4,6 @@
 [submodule "ArduinoSerialDriver/vendor/SerialPort"]
 	path = ArduinoSerialDriver/vendor/SerialPort
 	url = https://github.com/manashmandal/SerialPort
+[submodule "ArduinoCode/sketch_serialReceiver/src/vendor/FastLED"]
+	path = ArduinoCode/sketch_serialReceiver/src/vendor/FastLED
+	url = https://github.com/FastLED/FastLED
