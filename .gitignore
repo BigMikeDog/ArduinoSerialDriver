@@ -342,3 +342,5 @@ healthchecksdb
 *.sln
 *.vcxproj
 /ArduinoSerialDriver/ArduinoSerialDriver.vcxproj.filters
+*.elf
+*.hex
